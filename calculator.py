@@ -1,7 +1,8 @@
 from math import floor, ceil
+import random
 x = float(input("Enter first number: "))
 y = float(input("Enter second number: "))
-operation = input("What operation? (+, -, *, /, %, pow, abs, floor, ceil): ").strip().lower()
+operation = input("What operation? (+, -, *, /, %, pow, abs, floor, ceil,random): ").strip().lower()
 if operation == '+':
     print(f"Addition: {x + y}")
 elif operation == '-':
@@ -29,5 +30,10 @@ elif operation == 'floor':
 elif operation == 'ceil':
     print(f"Ceil of {x}: {ceil(x)}")
     print(f"Ceil of {y}: {ceil(y)}")
+elif operation == 'random':
+    low = int(min(x, y))
+    high = int(max(x, y))
+    rand_num = random.randint(low, high)
+    print(f"Random integer between {low} and {high}: {rand_num}")
 else:
     print("Invalid operation!")
