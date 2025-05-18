@@ -28,6 +28,8 @@ elif operation == 'floor':
     print(f"Floor of {y}: {floor(y)}")
 elif operation == 'ceil':
     print(f"Ceil of {x}: {ceil(x)}")
-    print(f"Ceil of {y}: {ceil(y)}")
+    print(f"Ceil of {y}: {ceil(y)}") 
+elif operation == "bitwise_xor":
+    print(f"bitwise: ", int(x) ^ int(y)) 
 else:
     print("Invalid operation!")
