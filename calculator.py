@@ -1,21 +1,33 @@
-def add(x, y):
-    return x + y
-
-def subtract(x, y):
-    return x - y
-
-def multiply(x, y):
-    return x * y
-
-def divide(x, y):
+from math import floor, ceil
+x = float(input("Enter first number: "))
+y = float(input("Enter second number: "))
+operation = input("What operation? (+, -, *, /, %, pow, abs, floor, ceil): ").strip().lower()
+if operation == '+':
+    print(f"Addition: {x + y}")
+elif operation == '-':
+    print(f"Subtraction: {x - y}")
+elif operation == '*':
+    print(f"Multiplication: {x * y}")
+elif operation == '/':
     if y == 0:
-        return "Cannot divide by zero"
-    return x / y
-
-print("Simple Calculator")
-print("1. Add\n2. Subtract\n3. Multiply\n4. Divide")
-
-choice = input("Enter choice (1/2/3/4): ")
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
-print("power", pow(num1,num2))
+        print("Error: Division by zero!")
+    else:
+        print(f"Division: {x / y}")
+elif operation == '%':
+    if y == 0:
+        print("Error: Modulus by zero!")
+    else:
+        print(f"Modulus: {x % y}")  
+elif operation == 'pow':
+    print(f"Power: {pow(x, y)}")
+elif operation == 'abs':
+    print(f"Absolute of {x}: {abs(x)}")
+    print(f"Absolute of {y}: {abs(y)}")
+elif operation == 'floor':
+    print(f"Floor of {x}: {floor(x)}")
+    print(f"Floor of {y}: {floor(y)}")
+elif operation == 'ceil':
+    print(f"Ceil of {x}: {ceil(x)}")
+    print(f"Ceil of {y}: {ceil(y)}")
+else:
+    print("Invalid operation!")
