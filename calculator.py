@@ -1,7 +1,7 @@
 from math import floor, ceil
 x = float(input("Enter first number: "))
 y = float(input("Enter second number: "))
-operation = input("What operation? (+, -, *, /, %, pow, abs, floor, ceil): ").strip().lower()
+operation = input("What operation? (+, -, *, /, %, pow, abs, floor, ceil, percentage): ").strip().lower()
 if operation == '+':
     print(f"Addition: {x + y}")
 elif operation == '-':
@@ -29,5 +29,7 @@ elif operation == 'floor':
 elif operation == 'ceil':
     print(f"Ceil of {x}: {ceil(x)}")
     print(f"Ceil of {y}: {ceil(y)}")
+elif operation == 'percentage':
+    print(f"{x}% of {y} is: {(x / 100) * y}")
 else:
     print("Invalid operation!")
